@@ -1,9 +1,9 @@
 {
   "name": "cafeccino",
   "version": "1.0.0",
-  "main": "welcome.html",
+  "main": "welcome.js",
   "scripts": {
-    "start": "parcel run welcome.html --no-cache",
+    "start": "parcel welcome.html --no-cache",
     "build": "parcel build welcome.html"
   },
   "author": "shahd elhlwaney",
