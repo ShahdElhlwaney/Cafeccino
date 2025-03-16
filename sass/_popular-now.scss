@@ -1,0 +1,108 @@
+.popular-now{
+    padding: 0 6rem;
+    h3{
+        position: relative;
+        bottom: 18rem;
+        font-size: 3.2rem;
+        span{
+            text-decoration-line:underline;
+            text-decoration-color:$primary-color ;
+
+        }
+    }
+    &__container{
+        height: 29.2rem;
+        background-color: $un-active-color;
+        border-radius: 64px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        bottom: 8rem;
+    }
+    &__list{
+        display: flex;
+        justify-content:center;
+        gap: 2.7rem;
+        flex-wrap: wrap;
+        .popular-now__item{
+            background-color: #fff;
+            position: relative;
+            bottom: 8rem;
+            border: solid 2px $grey-border;
+            border-radius: 10px;
+            padding: 10px;
+            width: 29rem;
+            height: 32rem;
+            &__content{
+                .rate{
+                    margin: 0.6rem;
+                   @include rate-component(6.2rem,2.6rem);       
+                    img{
+                        width: 1.4rem;
+                        height: 1.4rem;
+                    }
+                 
+                }
+                .price-container{
+                    display: flex;
+                    justify-content: space-between;
+                    padding-left: 1rem;
+                    font-size: 2.4rem;
+                    margin-top: 1.2rem;
+                    color: $secondary-color;
+                    p{
+                        font-weight: 600;
+                    }
+                    h4{
+                        font-weight: 700;
+                    }
+                    
+                }
+                img{
+                    width: 100%;
+                    height: 65%;
+                    border-radius: 6px;
+                }
+                .status-cart__container{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 7px 0;
+                    padding: 0 8px;
+                    .drink-status{
+                        display: flex;
+                        gap: 1rem;
+                        .active{
+                            border: 1px solid $primary-color;
+                            color: $secondary-color;
+
+                        }
+                        .item{
+                            width: 6.4rem;
+                            height: 3.2rem;
+                            border: 1px solid $un-active-color;
+                            border-radius: 5px;
+                            font-size: 1.6rem;
+                            font-weight: 600;
+                            line-height: 2;
+                            color: $un-active-color;
+                            text-align: center;
+                        }
+                }            
+                }
+                .cart-icon{
+                    padding-left: 4px;
+                    padding-top: 1.5px;
+
+                    @include cart-icon-component(4rem);
+                    img{
+                        height: 1.7rem;
+                        width: 1.8rem;
+                    }
+                }
+            }
+        }
+       
+    }
+   
+}

@@ -24,5 +24,20 @@ html{
     border-radius: 50%;
     width: $size;
     height: $size;
-    background-color: $secondary-color;
+    padding: 1rem;
+    background-color: $primary-color;
+}
+@mixin rate-component($width,$height,$font-size:1.4rem){
+    width: $width;
+    height: $height;
+    font-size: $font-size;
+    background-color: #fff;
+    border-radius: 62px;
+    border: solid 4px $grey-border;
+    text-align: center;
+    line-height: 2;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
