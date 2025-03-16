@@ -36,7 +36,7 @@
             &__content{
                 .rate{
                     margin: 0.6rem;
-                   @include rate-component(6.2rem,2.6rem);       
+                   @include rate-component(6.2rem,3rem);       
                     img{
                         width: 1.4rem;
                         height: 1.4rem;
@@ -91,9 +91,6 @@
                 }            
                 }
                 .cart-icon{
-                    padding-left: 4px;
-                    padding-top: 1.5px;
-
                     @include cart-icon-component(4rem);
                     img{
                         height: 1.7rem;
