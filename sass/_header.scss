@@ -45,7 +45,6 @@
             img{
                 width: 41.6rem;
                 height: 41.6rem;
-                // border-radius: 50%;
             }
             &__cappuccino{
                 width: 24.3rem;
@@ -95,7 +94,7 @@
                 }
                 .cart-icon-container{
                     display: inline-block;
-                    @include cart-icon-component(2.2rem);
+                    @include cart-icon-component(2.2rem,0.3rem);
                 }
             }
             .more-menu_btn{

@@ -20,11 +20,11 @@ html{
         @return #fff;
     }
 }
-@mixin cart-icon-component($size){
+@mixin cart-icon-component($size,$padding:1rem){
     border-radius: 50%;
     width: $size;
     height: $size;
-    padding: 1rem;
+    padding: $padding;
     background-color: $primary-color;
 }
 @mixin rate-component($width,$height,$font-size:1.4rem){
