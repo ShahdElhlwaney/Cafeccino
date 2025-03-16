@@ -1,0 +1,18 @@
+.order{
+    &-container{
+        background: url(../../img/order-cover.jpg);
+        display: flex;
+        justify-content: space-around;
+        &__content{
+            color: #fff;
+            font-size: 4.8rem;
+            width: 47.7rem;
+            height: 36.2rem;
+            border-radius: 16px;
+            background-color: rgba(0, 0, 0, 0.5); 
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+    }
+
+}
