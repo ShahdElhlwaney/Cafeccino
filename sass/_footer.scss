@@ -1,0 +1,102 @@
+.footer{
+    background-color: #000000;
+    position: fixed;
+    height: 33.4rem;
+    width:100vw;
+    bottom:0;
+    z-index: 100;
+    &-container{
+    &__content{
+        height: 29rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        &-logo{
+            display: flex;
+            gap: 0.5rem;
+        }
+        &__text-with-us{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            h3{
+                color: #fff;
+                font-size: 3rem;
+                font-weight: 700;
+            }
+            .subscribe {
+                margin: 0;
+                display: flex;
+                gap: 0.2rem;
+                justify-content: start;
+                align-items:flex-end;
+                input{
+                    border: 1px solid $secondary-color;
+                    background-color: transparent;
+                    outline: none;
+                    color: #fff;
+                    height: 4.5rem;
+                    width: 34.7rem;
+                    border-radius: 4px;
+                    padding: 5px;
+                }
+                button{
+                    background-color: $secondary-color;
+                    border: none;
+                    width: 11.2rem;
+                    height: 4.5rem;
+                    color: #fff;
+                    border-radius: 4px;
+                }
+              
+               
+            }
+            p{
+                color: #fff;
+                text-align: start;
+                font-size: 2rem;
+                font-weight: 400;
+                line-height: 1;
+            }
+    
+        }
+        &-menu{
+            &__list{
+                color: white;
+                list-style-type: none;
+                text-align: center;
+                font-size: 2rem;
+                font-weight: 400;
+            }
+        }
+        &__contact-us{
+            color: #fff;
+            font-size: 2rem;
+            h3{
+                font-weight: 700;
+            }
+            p{
+                font-weight: 400;
+            }
+        }
+    }
+    hr{
+        width: 95%;
+        margin: 0 auto;
+    }
+    &:last-child{
+        color: $grey-border;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+      
+        p{
+            margin-top: 0.7rem;
+        }
+      
+    }
+}
+
+   
+   
+}

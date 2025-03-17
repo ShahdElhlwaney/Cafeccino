@@ -1,6 +1,6 @@
 .subscribe{
     margin-top: 4rem;
-
+    margin-bottom: 35rem;
     &-cover{
         z-index: -1;
         height: 60%;
@@ -36,7 +36,7 @@
                 outline: none;
              }
              button{
-                 background-color: $primary-color;
+                 background-color: $secondary-color;
                  border-radius: 33px;
                  height: 4.2rem;
                  width: 13.8rem;
