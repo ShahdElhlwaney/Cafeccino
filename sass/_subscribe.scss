@@ -1,0 +1,51 @@
+.subscribe{
+    margin-top: 4rem;
+
+    &-cover{
+        z-index: -1;
+        height: 60%;
+        width: 80%;
+        object-fit: cover;
+        position:absolute;
+        left:50%;
+        transform: translateX(-50%);
+        border-radius: $border-radius;
+    }
+    &-content{
+        height: 40rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        color:white;
+        font-size: 3.2rem;
+        font-weight: 600;
+        &__order-now{
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            input{     
+                width: 48.6rem;
+                height: 5.4rem;
+                border:none;
+                border-radius: 33px;
+                position: absolute;
+                justify-self: center;
+                padding-left: 2rem;
+                outline: none;
+             }
+             button{
+                 background-color: $primary-color;
+                 border-radius: 33px;
+                 height: 4.2rem;
+                 width: 13.8rem;
+                 border: none;
+                 color: #fff;
+                 transform: translateX(16.5rem) translateY(-15%);           
+     
+             }
+        }
+       
+    }
+}
