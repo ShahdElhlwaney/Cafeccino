@@ -10,7 +10,8 @@ class SliderView extends View{
 
     _generateMarkup(isHidden=true){
         const curSlide=this._data[0];
-        return this._data[1].map(blog=>`<div class=" slide" data-id=${blog.id} data-next-slide=${+curSlide+1} data-prev-slide=${+curSlide-1}>
+        return this._data[1].map(blog=>`<div class=" slide" data-id=${blog.id} data-next-slide=${+curSlide+1} data-prev-slide=${+curSlide-1}
+                                        >
                                   <img src=${blog.image}>
                                   <h3>${blog.title}</h3>
                                   <p>${blog.description.substr(0,75)}
@@ -22,15 +23,12 @@ class SliderView extends View{
     addHandlerResPerSlideRender(handler){
         let slide;
         this._rightBtn.addEventListener('click',(e)=>{
-        console.log(this._parentElement.firstElementChild);
-         slide=this._parentElement.firstElementChild?.dataset.nextSlide;
-        console.log('slide',slide);
+        slide=this._parentElement.firstElementChild?.dataset.nextSlide;
         handler(slide);
-
-
        });
        this._leftBtn.addEventListener('click',(e)=>{
         slide=this._parentElement.firstElementChild?.dataset.prevSlide;
+        this._parentElement.childNodes.forEach(slide=>slide.style.transform="translateX(0rem)");
         handler(slide);
 
        });

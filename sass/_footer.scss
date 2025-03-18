@@ -1,13 +1,13 @@
 .footer{
     background-color: #000000;
     position: fixed;
-    height: 33.4rem;
+    height: 27.4rem;
     width:100vw;
     bottom:0;
     z-index: 100;
     &-container{
     &__content{
-        height: 29rem;
+        height: 24rem;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -91,7 +91,7 @@
         font-weight: 700;
       
         p{
-            margin-top: 0.7rem;
+            margin-top: 0.3rem;
         }
       
     }
