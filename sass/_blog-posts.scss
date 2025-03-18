@@ -4,7 +4,7 @@
     %slider-btn{
         transform: translateY(-50%);
         position: absolute;
-        top:50%;
+        top:60%;
         height: 8rem;
         width: 8rem;
         border-radius: 50%;
@@ -19,6 +19,14 @@
             cursor: pointer;
         }      
     }
+    &__right-btn{
+        right: 1rem;
+        @extend %slider-btn;
+     }
+     &__left-btn{
+        left: 1rem;
+        @extend %slider-btn;
+     } 
         background:url(../../img/blog_posts-cover.svg);
         background-position: top center;
         height: 78.7rem;
@@ -36,14 +44,7 @@
             width: 22.1rem;
         }
          &__slider{
-            &__right-btn{
-                right: 1rem;
-                @extend %slider-btn;
-             }
-             &__left-btn{
-                left: 1rem;
-                @extend %slider-btn;
-             } 
+           
         padding: 10rem;
         display: grid;
         align-items: center;
@@ -52,7 +53,8 @@
         gap: 2rem;
         position: relative;
 
-      
+        @include transition-ease;
+
       
          .slide{
             background-color: #fff;
@@ -62,10 +64,20 @@
             align-items: center;
             height: 52rem;
             @include transition-ease;
+           
+            img{
+                width: 35%;
+                height: 40%;
+            }
             h3{
                 color: $primary-color;
                 font-size: 3.2rem;
                 font-weight: 700;
+                overflow: hidden;          /* يخفي أي جزء زائد من النص */
+                width: 25rem;
+                white-space: nowrap;
+                text-overflow: ellipsis;  
+
             }
             p{
                 text-align: center;
@@ -73,12 +85,17 @@
                 font-weight: 400;
                 color: $secondary-color;
                 width: 19rem;
+               
             }
             .read-more{
                 color: $un-active-color;
                 font-size: 1.6rem;
                 font-weight: 700;
+                cursor: pointer;
             }
+         }
+         .hidden{
+            display: none;
          }
     }
  }
