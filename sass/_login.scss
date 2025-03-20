@@ -1,3 +1,10 @@
+.click{
+    border-bottom: solid 2px #000000;
+    color: #000000;
+}
+.unclick{
+    color: rgba(0,0,0,0.55);
+}
 .login-nav{
     display: flex;
     gap: 5rem;
@@ -6,13 +13,14 @@
     %login-nav__item{
         font-weight: 400;
         font-size: 1.8rem;
-        color: rgba(0,0,0,0.65);
         width: 45%;
         text-align: center;
         cursor: pointer;
+
     }
     &__email{
-        border-bottom: solid 2px #000000;
+        // border-bottom: solid 2px #000000;
+        // color: #000000;
         @extend %login-nav__item;
     }
     &__mobile{
