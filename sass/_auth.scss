@@ -11,11 +11,16 @@
     gap: 1rem;
     justify-content: center;
     padding: 1rem 9rem;
+    .auth-img{
+        // width: 50%;
+        // height: 140rem;
+        // height: 102.4rem;
+    }
     &-content{
         padding-right: 5%;
         padding-left: 5%;
         background-image: linear-gradient(#E7E7E7,#FFFFFF);
-        width: 50%;
+        width: 80rem;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -43,76 +48,84 @@
                 }
             }
         }
-        .form{
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            %input{
-                background-repeat: no-repeat;
-                background-position: 0.5rem 1.5rem;
-                padding-left: 3.5rem;
-                padding-bottom: 0.5rem;
-            }
-            &__input{
-                border: none;
-                background-color: #FFFFFF;
-                height: 5.6rem;
-                
-            }
-        
-            &__password{
-                background-image: url('../../img/password.svg');
-                @extend %input;
-            }
-          
-          
-            .remember-me{
+        .form-container{
+            .form{
+                height: 100%;
                 display: flex;
-                align-items: center;
-                gap: 0.5rem;
-                label{
-                    font-size: 1.6rem;
-                    font-weight: 400;
-                    color: $primary-color;
+                flex-direction: column;
+                gap: 2rem;
+                %input{
+                    background-repeat: no-repeat;
+                    background-position: 0.5rem 1.5rem;
+                    padding-left: 3.5rem;
+                    padding-bottom: 0.5rem;
                 }
-                input{
-                    appearance: none;
-                    accent-color: $primary-color; /* Changes the border and checkmark color */
-                    border-radius: 50%;
-                    border: solid 2px $primary-color ;
+                &__input{
+                    border: none;
+                    background-color: #FFFFFF;
+                    height: 5.6rem;
+                    
+                }
+            
+                &__password{
+                    background-image: url('../../img/password.svg');
+                    @extend %input;
+                }
+              
+              
+                .remember-me{
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    label{
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        color: $primary-color;
+                    }
+                    input{
+                        appearance: none;
+                        accent-color: $primary-color; /* Changes the border and checkmark color */
+                        border-radius: 50%;
+                        border: solid 2px $primary-color ;
+                        color: #fff;
+                        width: 1.8rem;
+                        height: 1.8rem;
+                        background-color: #fff;
+                        cursor: pointer;
+                    }
+                    input:checked::after{
+                        content: '✔';
+                        color: $primary-color;
+                        position: relative;
+                        bottom: 0.35rem;
+                        left: 0.1rem;
+                    }
+                }
+                button{
+                    align-self: center;
+                    height: 5.2rem;
+                    width: 28.5rem;
+                    border: none;
+                    border-radius: 8px;
                     color: #fff;
-                    width: 1.8rem;
-                    height: 1.8rem;
-                    background-color: #fff;
+                    background-color: $secondary-color;
+                    font-size: 2rem;
+                    font-weight: 400;
                     cursor: pointer;
+                    
+    
                 }
-                input:checked::after{
-                    content: '✔';
-                    color: $primary-color;
-                    position: relative;
-                    bottom: 0.35rem;
-                    left: 0.1rem;
-                }
-            }
-            button{
-                align-self: center;
-                height: 5.2rem;
-                width: 28.5rem;
-                border: none;
-                border-radius: 8px;
-                color: #fff;
-                background-color: $secondary-color;
-                font-size: 2rem;
-                font-weight: 400;
-                cursor: pointer;
             }
         }
-        &:last-child{
+        
+        .nav-statement{
             font-size: 1.6rem;
             font-weight:400;
             color:#000000;
             text-align: center;
-            #login{
+            position: relative;
+            bottom: 3rem;
+            #auth{
                 font-weight: 600;
                 font-size: 1.6rem;
                 color: #3FB6FF;

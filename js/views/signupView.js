@@ -1,12 +1,13 @@
 import AuthView from './authView.js';
 
 class SignupView extends AuthView{
-    _parentElement=document.querySelector('.auth-content');
+    _parentElement=document.querySelector('.form-container');
     
     _signupBtn=document.querySelector('.signup-btn');
     _overlay=document.querySelector('.overlay');
     _generateMarkup(){
-        return ` <input type="email" placeholder="Email"class="form__input form__email">
+        return `<form class="form"> 
+                 <input type="email" placeholder="Email"class="form__input form__email">
                  <input type="password" placeholder="Password"class="form__input form__password">
                  <input type="tel" placeholder="Phone"class="form__input form__phone">
                  <input type="text" placeholder="Address"class="form__input form__address">
@@ -14,6 +15,7 @@ class SignupView extends AuthView{
                      <input type="checkbox" id="remember_me" name="remember_me">
                      <label> Remember me</label>
                   </div>
+                  <button>Continue</button>
                  `;
     }
     _toggleSignupBtn(){
@@ -34,5 +36,10 @@ class SignupView extends AuthView{
             handler();
         });
    }
+//    addLoginNavHandlerRender(handler){
+//     this._authNav.addEventListener('click',()=>{
+//         handler();
+//     })
+//    }
 }
 export default new SignupView();

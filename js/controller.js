@@ -1,7 +1,8 @@
 import * as model from './model.js';
 import {NUM_BLOG_POSTS_RES_PER_SLIDE} from './config.js'
 import sliderView from './views/sliderView.js';
- import signupView from './views/signupView.js';
+import signupView from './views/signupView.js';
+import loginView from './views/loginView.js';
 const controlBlogPosts=async function(){
     await model.getBlogPosts();
     console.log(model.state.blogPosts.slide);
@@ -25,9 +26,14 @@ const controlResPerSlide=function(slide){
 const controlAuthView=function(){
     signupView.render();
 }
+const controlLoginView=function(){
+    loginView.render();
+
+}
 const init=function(){
     sliderView.addHandlerReadMoreRender(controlReadMore);
     sliderView.addHandlerResPerSlideRender(controlResPerSlide);
-    signupView.addSignupHandler(controlAuthView)
+    signupView.addSignupHandler(controlAuthView);
+    loginView.addLoginNavHandlerRender(controlLoginView);
 }   
 init();
