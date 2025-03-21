@@ -76,6 +76,7 @@ class LoginView extends AuthView{
         if(!mobileNavEl)return;
         this._emailNavClick();
     })
-   } 
+   }
+   
 }
 export default new LoginView();
