@@ -22,8 +22,8 @@ const controlResPerSlide=function(slide){
     const res=model.getBlogPostsPerSlide(slide);
     sliderView.render(res);    
 }
-const controlAuthView=function(authView){
-    console.log(authView);
+const controlAuthView=function(){
+    // console.log(authView);
     signupView.render();
 }
 const init=function(){

@@ -2,7 +2,7 @@ import AuthView from './authView.js';
 
 
 class SignupView extends AuthView{
-    _parentElement=document.querySelector('.form');
+    _parentElement=document.querySelector('.form-container');
     _signupBtn=document.querySelector('.signup-btn');
     _overlay=document.querySelector('.overlay');
     _generateMarkup(){
