@@ -22,12 +22,14 @@ const controlResPerSlide=function(slide){
     const res=model.getBlogPostsPerSlide(slide);
     sliderView.render(res);    
 }
-const controlAuthView=function(){
+const controlAuthView=function(authView){
+    console.log(authView);
     signupView.render();
 }
 const init=function(){
     sliderView.addHandlerReadMoreRender(controlReadMore);
     sliderView.addHandlerResPerSlideRender(controlResPerSlide);
-    signupView.addSignupHandler(controlAuthView)
+    signupView.addSignupHandler(controlAuthView);
+    signupView.addNavBetweenAuthViewsHandlerRender(controlAuthView)
 }   
 init();
