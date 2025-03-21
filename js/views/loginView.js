@@ -29,9 +29,8 @@ class LoginView extends AuthView{
                         `;
                         
     }
-    addLoginNavHandlerRender(handler){
+    addLoginViewHandlerRender(handler){
         this._authNav.addEventListener('click',()=>{
-            
             this._authWith.firstElementChild.textContent='Log in with';
             this._authNav.textContent=' Sign up';
             this._h1.textContent='Welcome Back';

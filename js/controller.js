@@ -34,6 +34,6 @@ const init=function(){
     sliderView.addHandlerReadMoreRender(controlReadMore);
     sliderView.addHandlerResPerSlideRender(controlResPerSlide);
     signupView.addSignupHandler(controlAuthView);
-    loginView.addLoginNavHandlerRender(controlLoginView);
+    loginView.addLoginViewHandlerRender(controlLoginView);
 }   
 init();

@@ -36,10 +36,6 @@ class SignupView extends AuthView{
             handler();
         });
    }
-//    addLoginNavHandlerRender(handler){
-//     this._authNav.addEventListener('click',()=>{
-//         handler();
-//     })
-//    }
+
 }
 export default new SignupView();
