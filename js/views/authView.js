@@ -1,26 +1,30 @@
 export default class AuthView {
    _authWindow=document.querySelector('.auth');
-   _authNav=document.querySelector('#auth');
-   _authWith=document.querySelector('.auth-with');
-   _h1=document.querySelector('.auth-content').querySelector('h1');
 
    render(){
     const markup=this._generateMarkup();
     this._parentElement.innerHTML=markup;
    }
-   addNavBetweenAuthViewsHandlerRender(handler){
+  static addNavBetweenAuthViewsHandlerRender(handler){
+      const authNav=document.querySelector('#auth');
+      const authWith=document.querySelector('.auth-with');
+      const h1=document.querySelector('.auth-content').querySelector('h1');
+      authNav.addEventListener('click',()=>{
+         handler(authNav.textContent);
 
-      this._authNav.addEventListener('click',(e)=>{
-         if(e.target.textContent==='Login'){
-            this._authWith.firstElementChild.textContent='Log in with';
-            this._authNav.textContent=' Sign up';
-            this._h1.textContent='Welcome Back';
+         if(authNav.textContent.trim()==="Login"){
+            console.log('LoginTrue');
+            authWith.firstElementChild.textContent='Log in with';
+            authNav.textContent=' Sign up';
+            h1.textContent='Welcome Back';
          }
          else{
-            // this._authWith.firstElementChild.textContent='Sign in with';
+            console.log('SignupTrue');
 
+            this._authWith.firstElementChild.textContent='Sign up with';
+            authNav.textContent=' Login';
+            this._h1.textContent='Tell us about yourself';
          }
-         handler(this._authNav.textContent);
 
          
       })
