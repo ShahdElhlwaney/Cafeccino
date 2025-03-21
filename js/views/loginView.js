@@ -7,7 +7,8 @@ class LoginView extends AuthView{
     _emailInputEl=this._parentElement.querySelector('.form__email');
     constructor(){
         super();
-        this.addLoginWithPhoneHandlerRender();
+        this._addLoginWithPhoneHandlerRender();
+        this._addLoginWithEmailHandlerRender();
     }
     _generateMarkup(){
         return ` <div class="login-nav">
@@ -37,29 +38,45 @@ class LoginView extends AuthView{
             handler();
         })
        }
-     _toggleNavEls(){
-       this._parentElement.querySelector('.form__email').classList.toggle('hidden');
-       this._parentElement.querySelector('.form__phone').classList.toggle('hidden');
-
+     _showPhoneInput(){
+        this._parentElement.querySelector('.form__phone').classList.remove('hidden');
+       this._parentElement.querySelector('.form__email').classList.add('hidden');
     } 
-    _changeMobileNavClickedStyle(){
+    _showEmailInput(){
+        this._parentElement.querySelector('.form__email').classList.remove('hidden');
+        this._parentElement.querySelector('.form__phone').classList.add('hidden');
+    }
+    _mobileNavClick(){
+      this._showPhoneInput();
       this._parentElement.querySelector('.login-nav__mobile').classList.add('click');
       this._parentElement.querySelector('.login-nav__mobile').classList.remove('unclick');
       this._parentElement.querySelector('.login-nav__email').classList.add('unclick');
       this._parentElement.querySelector('.login-nav__email').classList.remove('click');
     }
+    _emailNavClick(){
+        this._showEmailInput();
+        this._parentElement.querySelector('.login-nav__mobile').classList.add('unclick');
+        this._parentElement.querySelector('.login-nav__mobile').classList.remove('click');
+        this._parentElement.querySelector('.login-nav__email').classList.add('click');
+        this._parentElement.querySelector('.login-nav__email').classList.remove('unclick');
+    }
         
     
 
     
-    addLoginWithPhoneHandlerRender(){
+    _addLoginWithPhoneHandlerRender(){
         this._parentElement.addEventListener('click',(e)=>{
             const mobileNavEl=e.target.closest('.login-nav__mobile');
             if(!mobileNavEl)return;
-            this._toggleNavEls();
-            this._changeMobileNavClickedStyle();
+            this._mobileNavClick();
         })
-
     }   
+   _addLoginWithEmailHandlerRender(){
+    this._parentElement.addEventListener('click',(e)=>{
+        const mobileNavEl=e.target.closest('.login-nav__email');
+        if(!mobileNavEl)return;
+        this._emailNavClick();
+    })
+   } 
 }
 export default new LoginView();
