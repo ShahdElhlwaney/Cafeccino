@@ -36,11 +36,19 @@ const controlAuthNavView=function(authView){
     
 
 }
+const controlLogin=async function(user){
+    try{
+       await model.login(user);
+    }catch(err){
+        loginView.renderError(err.message);
+    }
+}
 const init=function(){
     sliderView.addHandlerReadMoreRender(controlReadMore);
     sliderView.addHandlerResPerSlideRender(controlResPerSlide);
     signupView.addSignupHandler(controlAuthView);
-    AuthView.addNavBetweenAuthViewsHandlerRender(controlAuthNavView)
+    AuthView.addNavBetweenAuthViewsHandlerRender(controlAuthNavView);
+    loginView.addLoginHandler(controlLogin);
 
 }   
 init();

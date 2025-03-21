@@ -18,8 +18,8 @@ class LoginView extends AuthView{
                  </div>  
                     <form class="form">
                         <input type="tel" placeholder="Phone"class="form__input form__phone hidden">
-                        <input type="email" placeholder="Email"class="form__input form__email">
-                        <input type="password" placeholder="Password"class="form__input form__password">
+                        <input type="text" placeholder="Email"class="form__input form__email" >
+                        <input type="password" placeholder="Password"class="form__input form__password" >
                         <div class="remember-me">
                             <input type="checkbox" id="remember_me" name="remember_me">
                             <label> Remember me</label>
@@ -39,7 +39,7 @@ class LoginView extends AuthView{
        }
      _showPhoneInput(){
         this._parentElement.querySelector('.form__phone').classList.remove('hidden');
-       this._parentElement.querySelector('.form__email').classList.add('hidden');
+        this._parentElement.querySelector('.form__email').classList.add('hidden');
     } 
     _showEmailInput(){
         this._parentElement.querySelector('.form__email').classList.remove('hidden');
@@ -77,5 +77,20 @@ class LoginView extends AuthView{
         this._emailNavClick();
     })
    } 
+   
+   addLoginHandler(handler){
+    this._parentElement.addEventListener('submit',function(e){
+        const form=e.target.closest('.form');
+        if(!form)return;
+        e.preventDefault();
+        const email=e.target.querySelector('.form__email').value;
+        const password=e.target.querySelector('.form__password').value;
+        const user={
+            "username":email,
+            "password":password
+        };
+        handler(user);
+    });
+   }
 }
 export default new LoginView();
