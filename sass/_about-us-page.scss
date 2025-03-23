@@ -28,7 +28,7 @@
         }
     }
     .quality-products{
-        height: 118.2rem;
+        height: 84.2rem;
         padding-top: 6rem;
         &__subsec1{
             height: 40.1rem;
@@ -213,5 +213,121 @@
             }
         }
     }
+    .our-team{
+        height: 78.7rem;
+        padding-top: 3rem;
+        &__container{
+        padding-top: 3rem;
+        background:url(../../img/blog_posts-cover.svg);
+        background-position: top center;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3{
+            font-size: 6.4rem;
+            font-weight: 700;
+            color: $secondary-color;
+            text-align: center;
+            line-height: 1.2;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            column-gap: 2rem;
+            padding-top: 1rem;
+            &-item{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                background-color: #fff;
+                height: 57.3rem;
+                img{
+                    width: 80%;
+                    height: 70%;
+                    // margin-bottom: 10rem;
+                }
+                h4{
+                    font-size: 3.2rem;
+                    font-weight: 700;
+                    color: $primary-color;
+                }
+                p{
 
+                    font-weight: 700;
+                    font-size: 2.8rem;
+                    color: $secondary-color;
+                    transform: translateY(-50%);
+                    // margin-bottom: 8rem;
+                }
+            }
+        }
+        }
+    }
+    .reviews{
+        padding-top: 4rem;
+        margin-bottom: 35rem;
+
+        &-container{
+            padding-top: 4rem;
+            background:url(../../img/reviews-bg.svg);
+            background-position: top center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h3{
+                font-weight: 700;
+                font-size: 6.4rem;
+                color: $secondary-color;
+                line-height: 1;
+            }
+            .review{
+                padding-top: 3rem;
+                width: 100%;
+                display: grid;
+                column-gap: 3rem;
+                row-gap: 2rem;
+                grid-template-columns: repeat(auto-fit,35rem);
+                align-items: stretch;
+                justify-content: center;
+                &-item{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    height: 35.2rem;
+                    border-radius: 11px;
+                    background-color: #000000;
+                    &__description{
+                        font-weight: 400;
+                        font-size: 2.2rem;
+                        color: $grey;
+                        width: 28rem;
+                    }
+                }
+                &-person{
+                    width: 28rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 2rem;
+                    &__data{
+                        color:$primary-color;
+
+                        h4{
+                            font-weight:700;
+                            font-size: 2.4rem;
+                        }
+                        p{
+                            font-weight: 400;
+                            font-size: 2rem;
+                            
+                        }
+                    }
+                }
+
+            }
+        }
+    }
    
