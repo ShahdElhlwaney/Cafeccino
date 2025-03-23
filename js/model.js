@@ -1,16 +1,17 @@
 import {NUM_BLOG_POSTS_RES_PER_SLIDE} from './config.js';
-import {getJson} from './helper.js';
+import {Ajax} from './helper.js';
 export const state={
     blogPosts:{
         slide:1,
         results:[
            
         ]
-    }
+    },
+    user:{}
 }
 export const getBlogPosts=async function(){
     try{
-        const data=await getJson('https://dummyjson.com/products');
+        const data=await Ajax('https://dummyjson.com/products');
         data.products.forEach(blog =>
              {
                 const[img]=blog.images;                
@@ -43,4 +44,18 @@ export const toggleDescription=function(id){
             blogPost.hidden=! blogPost.hidden;
             console.log(blogPost.hidden);
         }
+}
+export const login=async function(user){
+    try{
+        const data=await Ajax('https://dummyjson.com/auth/login',user);
+        console.log(data);
+        state.user={
+            "email":data.email,
+            "username":data.username,
+            "password":user.pass
+        }
+    }catch(err){
+       throw err;
+    }
+    
 }

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "welcome.js",
   "scripts": {
-    "start": "parcel welcome.html --no-cache",
-    "build": "parcel build welcome.html"
+    "start": "parcel serve welcome.html aboutUs.html --open",
+    "build": "parcel build welcome.html aboutUs.html"
   },
   "author": "shahd elhlwaney",
   "license": "ISC",

@@ -5,7 +5,13 @@ export default class AuthView {
     const markup=this._generateMarkup();
     this._parentElement.innerHTML=markup;
    }
-  static addNavBetweenAuthViewsHandlerRender(handler){
+   renderError(error){
+     const errorEl=document.createElement("p");
+     errorEl.innerHTML=error;
+     errorEl.style.color="red";
+     this._parentElement.lastElementChild.insertBefore(errorEl,this._parentElement.lastElementChild.querySelector('.remember-me'));
+   }
+    static addNavBetweenAuthViewsHandlerRender(handler){
       const authNav=document.querySelector('#auth');
       const authWith=document.querySelector('.auth-with');
       const h1=document.querySelector('.auth-content').querySelector('h1');
@@ -13,13 +19,11 @@ export default class AuthView {
          handler(authNav.textContent);
 
          if(authNav.textContent.trim()==="Login"){
-            console.log('LoginTrue');
             authWith.firstElementChild.textContent='Log in with';
             authNav.textContent=' Sign up';
             h1.textContent='Welcome Back';
          }
          else{
-            console.log('SignupTrue');
 
             this._authWith.firstElementChild.textContent='Sign up with';
             authNav.textContent=' Login';

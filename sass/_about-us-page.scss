@@ -1,0 +1,217 @@
+    .aboutUs-header__cover{
+        height: 80rem;
+        background: url('../../img/aboutus-header.svg') ;
+        background-position: top right;
+        height: 55.5rem;
+       
+        &--content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            h1{
+                font-weight: 700;
+                font-size: 10rem;
+                color: $secondary-color;
+                padding: 0;
+                line-height: 1;
+            }
+            p{
+                width: 112.6rem;
+                font-size: 2.2rem;
+                text-align: center;
+            }
+            .about-us__symbol{
+                width: 30.8rem;
+            }
+        }
+    }
+    .quality-products{
+        height: 118.2rem;
+        padding-top: 6rem;
+        &__subsec1{
+            height: 40.1rem;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            &--imgs{
+                width: 60.1rem;
+                height: 100%;
+              
+                .img1{
+                    position: relative;
+                    border-top: solid 3px $secondary-color;
+                    border-left: solid 3px $secondary-color;
+                    width: 24.7rem;
+                    height: 16.8rem;
+                    z-index: 100;
+                    background-color: #fff;
+                    left: 2.8rem;
+
+                    img{
+                        position: absolute;
+                        width: 100%;
+                        height: 90%;
+                        left: 0.5rem;
+                        top: 1.1rem;
+                    }
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        top: 16.2rem;
+                        width: 53%; 
+                        height: 3px; 
+                        left: 0;
+                        background-color: $secondary-color
+                    }
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 24.1rem;
+                        width: 3px; 
+                        height: 27%; 
+                        background-color: $secondary-color;
+                    }
+                }
+               
+                
+                .img2{
+
+                    height: 30.9rem;
+                    width: 26rem;
+                    border: solid 3px $secondary-color;
+                    position: relative;
+                    bottom: 14rem;
+                    left: 15.5rem;
+                    background-color: #fff;
+                    %img{
+                        height: 52%;
+                        width: 100%;
+                    }
+                    &--1{
+                        @extend %img;
+                        position: absolute;
+                        left: 5.6rem;
+                        top: 1.1rem;
+                        z-index: 100;
+                    }
+                    &--2{
+                        @extend %img;
+                        position: absolute;
+                        top: 13.6rem;
+                        right: 5.2rem;
+                    }
+                }
+                .img3{
+                    position: relative;
+                    width: 24.7rem;
+                    height: 16.8rem;
+                    border-right: solid 3px $secondary-color;
+                    border-bottom: solid 3px $secondary-color;
+                    bottom: 27.9rem;
+                    left: 30rem;
+                    background-color: #fff;
+                     img{
+                        position: absolute;
+                        width: 100%;
+                        height: 90%;
+                        top: 0.7rem;
+                        right: 0.5rem;
+                     }
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        top: 12.7rem;
+                        width: 3px; 
+                        height: 25%; 
+                        background-color: $secondary-color;
+                    }
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 40%;
+                        width: 60.5%; 
+                        height: 3px; 
+                        background-color: $secondary-color;
+                    }
+                }
+
+            }
+            &--description{
+                width: 52.2rem;
+                h3{
+                    font-weight: 700;
+                    font-size: 5.6rem;
+                    color: $secondary-color;
+                    line-height: 1.2;
+                }
+                p{
+                    font-weight: 400;
+                    font-size: 2.2rem;
+                    color: $grey;
+                }
+            }
+        }
+        &__subsec2{
+           display: flex;
+           justify-content: center;
+           &--description{
+            width:50.2rem;
+            h3{
+                font-weight: 700;
+                font-size: 5.6rem;
+                line-height: 1.2;
+            }
+            .desc{
+                font-weight: 400;
+                font-size: 2.2rem;
+                color: $grey;
+            }
+            .watch-video{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                font-size: 2.2rem;
+                font-weight: 700;
+                color: $primary-color;
+                margin-top: 1.5rem;
+                cursor: pointer;
+            }
+           }
+            &--video-container{
+                align-self: center;
+                position: relative;
+                width: 53.6rem;
+                .outline{
+                    width: 49.5rem;
+                    height: 26.2rem;
+                    border: solid 3px $secondary-color;
+                    position: absolute;
+                    left: 10rem;
+                    right: 1rem;
+                    z-index: -1;
+                }
+                .video{
+                    position: relative;
+                    top: 3rem;
+                    left: 7rem;
+
+                    video{
+                        width:50.1rem;
+                        border-radius: 10px
+
+                    }
+                    img{
+                        width: 10%;
+                        z-index:100;
+                        transform: translateX(21rem) translateY(-15rem);
+                    }
+                }
+            }
+        }
+    }
+
+   
