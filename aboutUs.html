@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/css/main.css">
+    <script type="module" src="js/aboutUsController.js"></script>
+
     <title>Cafeccino</title>
 </head>
 <body>
@@ -31,8 +33,8 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="signup-btn">
-                    sign up
+                <div class="userName">
+                   
                 </div>
                 <div class="search-input">
                     <img  src="img/search.svg" alt="image not found" class="search-icon">
@@ -62,7 +64,7 @@
             </div>
 
         </header>
-        <main>
+        <main class="about-us__page">
             <section class="quality-products">
                 <div class="quality-products__subsec1">
                      <div class="quality-products__subsec1--imgs">
@@ -97,14 +99,14 @@
                             sed varius tortconsectetur
                         </p>
                         <div class="watch-video">
-                            <p>WATCH VIDEO</p>
-                            <img src="img/play-circle.svg" alt="play-circle">
+                            <p class="play">WATCH VIDEO</p>
+                            <img class="pause" src="img/play-circle.svg" alt="play-circle">
                         </div>
                     </div>
                     <div class="quality-products__subsec2--video-container">
                         <div class="outline"></div>
                         <div class="video">
-                            <video autoplay>
+                            <video>
                                 <source src="img/video.mp4" type="video/mp4">
                                 Your browser does not support HTML video.
                             </video>

@@ -6,6 +6,7 @@ export default class AuthView {
     this._parentElement.innerHTML=markup;
    }
    renderError(error){
+      console.error(error);
      const errorEl=document.createElement("p");
      errorEl.innerHTML=error;
      errorEl.style.color="red";

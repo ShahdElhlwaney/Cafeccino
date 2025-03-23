@@ -3,7 +3,6 @@ import AuthView from "./authView";
 class LoginView extends AuthView{
     _parentElement=document.querySelector('.form-container');
     _authWith=document.querySelector('.auth-with');
-    _h1=document.querySelector('.auth-content').querySelector('h1');
     _emailInputEl=this._parentElement.querySelector('.form__email');
     constructor(){
         super();
@@ -30,10 +29,12 @@ class LoginView extends AuthView{
                         
     }
     addLoginViewHandlerRender(handler){
+        const h1=document.querySelector('.auth-content').querySelector('h1');
+
         this._authNav.addEventListener('click',()=>{
             this._authWith.firstElementChild.textContent='Log in with';
             this._authNav.textContent=' Sign up';
-            this._h1.textContent='Welcome Back';
+            h1.textContent='Welcome Back';
             handler();
         })
        }

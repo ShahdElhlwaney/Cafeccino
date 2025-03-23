@@ -5,11 +5,10 @@ import signupView from './views/signupView.js';
 import loginView from './views/loginView.js';
 import AuthView from './views/authView.js';
 import homeView from './views/homeView.js';
+
 const controlBlogPosts=async function(){
     await model.getBlogPosts();
-    console.log(model.state.blogPosts.slide);
     const res=model.getBlogPostsPerSlide(model.state.blogPosts.slide);
-    console.log(res[1]);
     sliderView.render(res);
 }
 controlBlogPosts();
@@ -40,17 +39,19 @@ const controlAuthNavView=function(authView){
 const controlLogin=async function(user){
     try{
        await model.login(user);
+       console.log('model.state.user.username',model.state.user.username);
        homeView.addHomeHandlerRender(model.state.user.username);
     }catch(err){
         loginView.renderError(err.message);
     }
 }
+
 const init=function(){
     sliderView.addHandlerReadMoreRender(controlReadMore);
     sliderView.addHandlerResPerSlideRender(controlResPerSlide);
     signupView.addSignupHandler(controlAuthView);
     AuthView.addNavBetweenAuthViewsHandlerRender(controlAuthNavView);
     loginView.addLoginHandler(controlLogin);
-
+    
 }   
 init();

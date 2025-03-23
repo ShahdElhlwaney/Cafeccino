@@ -1,5 +1,6 @@
 import {NUM_BLOG_POSTS_RES_PER_SLIDE} from './config.js';
 import {Ajax} from './helper.js';
+import { TOKEN } from './config.js';
 export const state={
     blogPosts:{
         slide:1,
@@ -45,17 +46,34 @@ export const toggleDescription=function(id){
             console.log(blogPost.hidden);
         }
 }
+const saveAccessToken=function(token){
+    localStorage.setItem('accessToken',JSON.stringify(token));
+}
+export const getAccessToken=function(){
+    const userName=localStorage.getItem('accessToken');
+    return JSON.parse(userName);
+}
 export const login=async function(user){
     try{
         const data=await Ajax('https://dummyjson.com/auth/login',user);
-        console.log(data);
         state.user={
             "email":data.email,
             "username":data.username,
-            "password":user.pass
-        }
+            "password":user.pass,
+        };
+        saveAccessToken(data.accessToken);
+        // TOKEN= data.refreshToken;
     }catch(err){
        throw err;
     }
-    
+}
+export const getCurrentAuthUser=async function(){
+    try{
+        const data=await Ajax('https://dummyjson.com/auth/me',undefined,getAccessToken());
+        state.user.username=data.username;
+    }catch(err){
+        throw err;
+
+    }
+
 }
