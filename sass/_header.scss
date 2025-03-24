@@ -198,24 +198,32 @@
     cursor: pointer;
     @include transition-ease;
 }
+%search-input{
+    height: 4rem;
+    width: 22.2rem;
+    outline: none;
+    border-color: transparent;
+    border: none;
+    border-radius: $border-radius;
+    padding-left: 3.5rem;
+    color: $grey-border;
+}
+%search-icon{
+    width: 2.4rem;
+    height: 2.4rem;
+    position: absolute;
+    margin-left: 0.8rem;
+    margin-top: 0.8rem;
+
+}
 .search-input{
     input{
-       height: 4rem;
-       width: 22.2rem;
-       outline: none;
-       border-color: transparent;
-       border: none;
-       border-radius: $border-radius;
-       padding-left: 3.5rem;
-       color: $grey-border;
+       @extend %search-input;
        box-shadow:  1px 2px 10px 1px $grey-border
     }
     .search-icon{
-        width: 2.4rem;
-        height: 2.4rem;
-        position: absolute;
-        margin-left: 0.8rem;
-        margin-top: 0.8rem;
+        @extend %search-icon;
+      
 
     }
 

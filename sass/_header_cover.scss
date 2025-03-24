@@ -1,0 +1,27 @@
+.header__cover{
+    height: 80rem;
+background: url('../../img/aboutus-header.svg') ;
+background-position: top right;
+&--content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    h1{
+        font-weight: 700;
+        font-size: 10rem;
+        color: $secondary-color;
+        padding: 0;
+        line-height: 1;
+    }
+    p{
+        width: 112.6rem;
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .about-us__symbol{
+        width: 30.8rem;
+    }
+}
+}

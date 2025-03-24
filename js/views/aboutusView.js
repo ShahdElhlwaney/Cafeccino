@@ -5,6 +5,7 @@ class AboutUsView extends View{
     _video=document.querySelector('.video').querySelector('video');
     _videoPlayBtn=this._video.nextElementSibling;
     _authUserName=document.querySelector('.userName');
+    _nav=document.querySelector('.nav');
     constructor(){
         super();
         this._addWatchVideoHandler();
@@ -13,8 +14,9 @@ class AboutUsView extends View{
     addAuthUserNameHandlerRender(handler){
         window.addEventListener('DOMContentLoaded',function(){
             handler();
-        })
+        });
     }
+  
     _hideVideoPlayBtn(){
         this._videoPlayBtn.classList.add('hidden');
     }

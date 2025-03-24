@@ -1,7 +1,6 @@
-import aboutUsView from './views/aboutusView.js';
+import ourProductView from './views/ourProductView.js';
 import headerView from './views/headerView.js';
 import * as model from './model.js';
-
 const controlAuthUserName=async function(){
     try{
         await model.getCurrentAuthUser();
@@ -13,7 +12,6 @@ const controlAuthUserName=async function(){
   
 }
 const init=function(){
-        aboutUsView.addAuthUserNameHandlerRender(controlAuthUserName);
-    
+        ourProductView.addAuthUserNameHandlerRender(controlAuthUserName);
 }
 init();

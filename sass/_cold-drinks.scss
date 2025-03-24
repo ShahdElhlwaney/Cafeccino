@@ -1,0 +1,175 @@
+.products{
+    &__cold-drinks{
+        position: relative;
+        margin-top: 5rem;
+        .head{
+            padding-left: 3rem;
+            color: $secondary-color;
+            font-weight: 700;
+            font-size: 4rem;
+
+            span{
+
+                text-decoration: underline;
+                text-decoration-thickness: 8px;
+                text-decoration-color: $cold-drinks-primary-color;
+                text-underline-offset: 2rem;
+            }
+        }  
+        &--grid{
+                display: grid;
+                height: 64rem;
+                align-items: center;
+                justify-content: center;
+                column-gap: 2.5rem;
+                grid-template-columns: repeat(3,auto);
+                .grid-item{
+                    &__content{
+                        padding-top: 2rem;
+                        h2{
+                            font-weight: 500;
+                            font-size: 2rem;
+                            color: $cold-drinks-primary-color;
+                        }
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                        justify-content: center;
+                        padding-left: 2rem;
+                        padding-right: 2rem;
+                    }
+                    
+                    width: 36rem;
+                    height: 54.3rem;
+                    border-radius:25px ;
+                    border: solid 2px $cold-drinks-primary-color;
+                    &__img{
+                        position: relative;
+                        height: 24.4rem;
+                        background: url(../../img/cold-drinks_bg1.svg), url(../../img/products_bg.svg)
+                        ,url(../../img/cold-drinks_bg3.svg) no-repeat bottom center,
+                        #000000;
+                        border-radius:20px 20px 0 0 ;
+
+                        img{
+                            position: absolute;
+                            left:35%;
+                            // top: 2%;
+                            border-radius:20px 0 20px 0 ;
+                        }
+
+                    }
+                    h4{
+                        font-weight: 400;
+                        font-size: 1.4rem;
+                        color: $cold-drinks-primary-color;
+                    }
+                    p{
+                        font-weight: 400;
+                        font-size: 1rem;
+                        color: $grey;
+                    }
+                    .drink-types{
+                        display: flex;
+                        gap: 1rem;
+                        .type{
+                            text-align: center;
+                            line-height: 1.9;
+                            width: 6.4rem;
+                            height: 2rem;
+                            border-radius: 15px;
+                            color: #fff;
+                            background-color: $cold-drinks-primary-color;
+                        }
+                    }
+                    .milk-choices{
+                        %choice{
+                            width: 7.6rem;
+                            height: 3.8rem;
+                            border: solid 1px $cold-drinks-primary-color;
+                            border-radius: 10px;
+                            line-height: 3.5;
+                            text-align: center;
+                        }
+                        .active{
+                            background-color: $cold-drinks-primary-color;
+                            color:#fff;
+                            @extend %choice;
+                        }
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        .choice{
+                            @extend %choice;
+                            color: $cold-drinks-primary-color;
+                        }
+                        .add{
+                            width: 2.2rem;
+                            height:2.2rem;
+                            border: solid 1px $cold-drinks-primary-color;
+                            border-radius: 4px;
+                            font-weight: 700;
+                            color: $cold-drinks-primary-color;
+                            font-size: 2rem;
+                            line-height: 1;
+                            text-align: center;
+                        }
+                      
+                    }
+                    .price-container{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        p{
+                            font-weight: 700;
+                            font-size: 2rem;
+                            color:$cold-drinks-primary-color;
+                        }
+                        .cart-container{
+                            display: flex;
+
+                            %cart{
+                                width: 2.1rem;
+                                height: 2.2rem;
+                                background-color:$cold-drinks-primary-color;
+                                color: #fff;
+                                text-align: center;
+                                font-size: 1.5rem;
+                            }
+                            .min-cart{
+                               @extend %cart;
+                               border-radius: 4px 0 0 4px;
+                            }
+                            .add-cart{
+                                @extend %cart;
+                                border-radius: 0 4px 4px 0;
+
+                            }
+                            .num-cart{
+                                width:2.9rem;
+                                height:2.2rem;
+                                border:solid 1px $cold-drinks-primary-color;
+                                text-align: center;
+                                font-size: 2rem;
+                                line-height: 1;
+                                color: $cold-drinks-primary-color;
+                            }
+                            img{
+                                margin-left: 1rem;
+                            }
+                        }
+                    }
+                }
+                
+        }
+        .see-more{
+            position: absolute;
+            font-size: 2rem;
+            font-weight: 400;
+            color: #F30000;
+            right: 4rem;
+            bottom: 0rem;
+        }
+        }
+        
+    }
