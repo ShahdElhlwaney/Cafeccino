@@ -8,7 +8,9 @@ export const state={
            
         ]
     },
-    user:{}
+    user:{
+        carts:[]
+    }
 }
 export const getBlogPosts=async function(){
     try{
@@ -74,6 +76,15 @@ export const getCurrentAuthUser=async function(){
     }catch(err){
         throw err;
 
+    }
+
+}
+export const addToCart=async function(product){
+    try{
+        // const data=await Ajax('url',product,getAccessToken());
+        state.user.carts.push(product);
+    }catch(err){
+        throw err;
     }
 
 }
