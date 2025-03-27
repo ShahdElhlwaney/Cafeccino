@@ -45,3 +45,20 @@ body{
     align-items: center;
     justify-content: space-evenly;
 }
+@mixin setBackgroundSlide($bg1Url,$bg2Url,$bg3Url,$bgColor){
+    background: $bg1Url center/100% 80%,$bg3Url bottom/30% 80%,$bg2Url center/100% 80%,$bgColor;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    // background-size: 80% 65%;
+
+}
+@mixin setNavButtons(){
+    display: flex;
+    position: absolute;
+    right: 5rem;
+    top: 10rem;
+    gap:2rem;
+    img{
+        cursor: pointer;
+    }
+}

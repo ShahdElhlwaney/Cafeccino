@@ -1,0 +1,56 @@
+
+.offers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    gap: 3rem;
+    width: 100%;
+    margin-bottom: 15rem;
+  
+    .nav-buttons{
+        @include setNavButtons();
+    }
+.discount{
+    width:45.3rem;
+    height:7rem;
+    background-color: $secondary-color;
+    color: $primary-color;
+    border-radius: 16px;
+    font-size: 4rem;
+    font-weight:400;
+    font-family: Parisienne;
+    text-align: center;
+}
+.categories{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+
+  
+    .category{
+        font-weight: 400;
+        font-size: 3.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 27.1rem;
+        gap: 1rem;
+        cursor: pointer;
+       
+        .donuts-img{
+            width:25rem;
+        }
+        img{
+            width: 17.9rem;
+            height: 17.7rem;
+        }
+        p{
+            line-height:1;
+        }
+    }
+}
+}
