@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script type="module" src="js/productsController.js"></script>
+    <title>Cafeccino</title></head>
+<body>
+    <header>
+        <div class="header delivery-header">
+            <div class="humburger">
+            </div>
+            <div class="website">
+                <img src="img/logo.svg" alt="" class="website-logo">
+               <h2 class="website-title">
+                Cafe<span>cceno</span>
+               </h2>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-list__item " >
+                        <a href="welcome.html">Home</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="ourProduct.html">Our Product</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="delivery.html">Delivery</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="userName">
+            </div>
+            <div class="search-input">
+                <img  src="img/search.svg" alt="image not found" class="search-icon">
+                <input type="text">
+            </div>
+            <div class="lang">
+                <img src="img/lang.svg" alt="" class="lang-icon">
+                <h2 class="lang-text">English</h2>
+                <i class='fas fa-angle-down' style='font-size:2rem'></i>
+    
+            </div>
+            <img class="cart-header" src="img/cart-header.svg">
+        </div>
+    </header>
+    <div class="payment">
+        <div class="order-summary">
+            <div class="order-summary__head">
+                <h2>Show Order Summary<span>▾</span></h2>
+                <p class="price">378.00 EGP</p>
+            </div>
+            <div class="summary hide">
+                <div class="schedule-order hide-opacity">
+                    <h2 class="schedule-order__title">
+                        Schedule Order
+                    </h2>
+                    <p class="schedule-order__date">
+                      23 February 2025 at 16:30
+                    </p>
+                </div>
+                <div class="discount-code__container hide-opacity">
+                    <h2>Discount code</h2>
+                    <div class="discount-code">
+                        <p>Drinks</p>
+                        <p class="apply">Apply</p>
+                    </div>
+                </div>
+                
+                <div class="discount-container hide-opacity">
+                    <hr>
+                    <div class="subtotal-total__container">
+                        <div class="subtotal">
+                            <h2 class="title">subtotal</h2>
+                            <p>420.00 EGP</p>
+                       </div>
+                       <div class="discount">
+                           <h2 class="title">Discount(10%)</h2>
+                           <p>-42.00 EGP</p>
+                       </div>
+                       
+                    </div>
+                    <hr>
+                    
+                    <div class="total">
+                        <h2>Total</h2>
+                        <p>378.00 EGP</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="phone-number__container">
+            <h2>Phone number</h2>
+            <div class="phone-number">(+20) 0100000000</div>
+
+        </div>
+        <div class="payment-method__container">
+            <div class="payment-method__container--head">
+                <h2>Payment method</h2>
+                <p>+ Add new</p>
+            </div>
+            <div class="payment-methods">
+                <div class="payment-method">
+                    <div class="payment-method__data" >
+                        <div class="data-radio">
+                            <input class="radio" type="radio" name="radio">
+                            <div class="data">
+                                <h3>****8304</h3>
+                                <p>Visa . <span>Edit</span></p>
+                            </div>
+                        </div>       
+                        <img src="img/visa.svg"alt="">
+                    </div>
+                </div>
+                <div class="payment-method">
+                    <div class="payment-method__data" >
+                        <div class="data-radio">
+                            <input class="radio" type="radio" name="radio">
+                            <div class="data">
+                                <h3>****8304</h3>
+                                <p>Paypal . <span>Edit</span></p>
+                            </div>
+                        </div>       
+                        <img src="img/paypal.svg"alt="">
+                    </div>
+                </div>
+                <div class="payment-method">
+                    <div class="payment-method__data" >
+                        <div class="data-radio">
+                            <input class="radio" type="radio" name="radio">
+                            <div class="data">
+                                <h3>****0000</h3>
+                                <p>Vodafone cash . <span>Edit</span></p>
+                            </div>
+                        </div>       
+                        <img src="img/vodafone-cash.svg"alt="">
+                    </div>
+                </div>
+            </div>
+            <h2></h2>
+        </div>
+        <button>Pay 378.00 EGP</button>
+    </div>
+</body>
+</html>

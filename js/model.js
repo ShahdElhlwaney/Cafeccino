@@ -58,6 +58,7 @@ export const getAccessToken=function(){
 export const login=async function(user){
     try{
         const data=await Ajax('https://dummyjson.com/auth/login',user);
+        console.log('data',data);
         state.user={
             "email":data.email,
             "username":data.username,

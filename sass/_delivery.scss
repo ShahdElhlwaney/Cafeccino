@@ -1,0 +1,315 @@
+.delivery-header{
+    position:relative;
+}
+.delivery{
+    margin-top: 6rem;
+    margin-bottom: 30rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    &_head{
+        font-weight:600;
+        font-size: 2.4rem;
+    }
+    
+    &-content{
+        margin-top: 4rem;
+        display: flex;
+        .left-side__container{
+
+             display: flex;
+             flex-direction: column;
+             gap: 3rem;
+             width: 76.8rem;
+             .deliveryScheduling{
+                margin-top: 5rem;
+                display: flex;
+                gap: 4rem;
+
+                .date,.time{
+                    margin-top: 1rem;
+                    display: flex;
+                    align-items:center;
+                    justify-content: center;
+                    gap: 0.5rem;
+                    width: 18.1rem;
+                    height:5.4rem;
+                    border-bottom: solid 1px $grey;
+                    img{
+                        width: 2rem;
+                        height:2rem;
+                    
+                    }
+                    p{
+                        color: $grey;
+                        font-weight: 500;
+                        font-size: 1.6rem;
+                    }
+                   
+                }
+                .delivery-date,.delivery-time{
+                    h3{
+                        font-weight: 500;
+                        font-size: 1.6rem;
+                    }
+                  
+                }
+             }
+        }
+        %delivery-head{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            img{
+                width: 2.5rem;
+                height: 3.2rem;
+            }
+            h2{
+                font-weight: 600;
+                font-size: 2.4rem;
+            }
+        }
+
+        &__address{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            .head{
+              @extend %delivery-head;
+            }
+            // .address-container{
+            //    display: flex;
+            //    gap:3rem;
+                .address{
+                    width: 36.9rem;
+                    height: 15rem;
+                    border: solid 1px  $primary-color;
+                    border-radius: 10px;
+                    border-style: dashed;
+                    display: flex;
+                    flex-direction: column; 
+                    gap: 1rem;
+                    justify-content: center;
+                    padding-left: 2rem;
+                    img{
+                        width: 2.5rem;
+                        height:3.2rem;
+                    }
+                    p{
+                        font-weight: 500;
+                        font-size: 1.6rem;
+                    }
+                }
+            // }
+        }
+        &__typeOrder{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            .head{
+                @extend %delivery-head;
+
+            }
+
+            .type-order__container{
+                display: flex;
+                gap: 3rem;
+                %type-order_btn{
+                    height: 5.4rem;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 1rem;
+                    span{
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                    }
+                }
+                .btn-active{
+                   background-color: $primary-color;
+                   color: #FFFF;
+                }
+                .order-now-update-width{
+                    width: 20.5rem;     
+                    @include transition-ease;
+                }
+                .order-now-original-width{
+                    width: 16.5rem;     
+                }
+                .original-width{
+                    width: 20.5rem;
+                    @include transition-ease;
+
+                }
+                .update-width{
+                    width: 16.5rem;     
+                    @include transition-ease;
+                }
+                .order-now{
+                    background-color: $primary-color;
+                    color: #FFFF;
+                    border: none;
+                    @extend %type-order_btn;
+                }
+                .schedule-btn{
+                    
+                    height: 5.4rem;
+                    border: solid 1px $primary-color;
+                    border-style: dashed;
+                    border-radius: 10px;
+                    background-color: transparent;
+                    @extend %type-order_btn;
+                }
+                .unactive-btn{
+                    cursor:pointer;
+                }
+            }
+        }
+        .right-side__container{
+            width: 60rem;
+            position: relative;
+            .cart,.bill-details,.total,button{
+                width: 80%;
+                @include centerElement;
+
+            }
+            .cart{
+                // width: 95%;
+                margin-bottom: 4rem;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                &-head{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 3rem;
+                    padding: 0;
+
+                    h2,p{
+                        font-weight: 500;
+                    }
+                    h2{
+                        font-size: 2.4rem;
+                    }
+                    p{
+                        font-size: 1.6rem;
+                    }
+                }
+                &-item{
+                    display: flex;
+                    &__content{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.5rem;
+                        %font-style{
+                            font-weight: 500;
+                            font-size: 1.6rem;
+                        }
+                        .category{
+                            @extend %font-style;
+                            span{
+                                color: $primary-color;
+                            }
+                        }
+                        .name-price-num__container{
+                            width: 44rem;
+                            display: flex;
+                            justify-content: space-between;
+                            .name-price{
+                                .item-name{
+                                    @extend %font-style;
+                                }
+                                .price{
+                                    font-weight: 400;
+                                    font-size: 1.6rem;
+                                    color: $grey
+                                }
+                            }
+                            .cart-item__num{
+                                display: flex;
+                                align-items: center;
+                                width: 10.7rem;
+                                height:6rem;
+                                gap: 2rem;
+                                .num{
+                                    font-weight: 400;
+                                    font-size: 2rem;
+                                    color: $grey;
+                                }
+        
+                            }
+                        }
+                       
+                        
+                    }
+                   
+
+                }
+            }
+            .bill-details{
+                display: flex;
+                flex-direction:column;
+                gap: 2rem;
+                margin-bottom: 4rem;
+                %bill-details-font-size__style{
+                    font-weight: 400;
+                    font-size: 1.4rem;
+                    color: $grey;
+                }
+                h2,&__container{
+                    @extend %bill-details-font-size__style;
+                }
+           
+                .taxes-container{
+                    .taxes{
+                        display: flex;
+                    }
+                }
+                &__container{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .delivery{
+                        width: 17.1rem;
+                        padding: 0;
+                        height:100%;
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: start;
+                        &-desc{
+                            width: 13rem;
+                        }
+                        img{
+                            width: 1.6rem;
+                            height: 1.6rem;
+                        }
+                    }
+                }
+            }
+            .total{
+                display: flex;
+                justify-content: space-between;
+                font-weight: 500;
+                font-size: 2.4rem;
+                margin-bottom: 4rem;
+                
+            }
+            button{
+                width: 36.5rem;
+                height:5.6rem;
+                background-color: $primary-color;
+                color:#FFFF;
+                border: none;
+                font-weight: 500;
+                font-size: 1.6rem;
+                border-radius: 10px;
+                margin-bottom: 4rem;
+                cursor: pointer;
+
+            }
+        }
+    }
+}

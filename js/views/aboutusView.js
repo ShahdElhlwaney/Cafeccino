@@ -11,11 +11,7 @@ class AboutUsView extends View{
         this._addWatchVideoHandler();
         this._addPauseVideoHandler();
     }
-    addAuthUserNameHandlerRender(handler){
-        window.addEventListener('DOMContentLoaded',function(){
-            handler();
-        });
-    }
+  
   
     _hideVideoPlayBtn(){
         this._videoPlayBtn.classList.add('hidden');

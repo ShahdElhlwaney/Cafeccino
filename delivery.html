@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script type="module" src="js/productsController.js"></script>
+    <title>Cafeccino</title>
+</head>
+<body>
+    <header>
+        <div class="header delivery-header">
+            <div class="humburger">
+            </div>
+            <div class="website">
+                <img src="img/logo.svg" alt="" class="website-logo">
+               <h2 class="website-title">
+                Cafe<span>cceno</span>
+               </h2>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-list__item " >
+                        <a href="welcome.html">Home</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="ourProduct.html">Our Product</a>
+                    </li>
+                    <li class="nav-list__item active">
+                        <a href="delivery.html">Delivery</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="userName">
+            </div>
+            <div class="search-input">
+                <img  src="img/search.svg" alt="image not found" class="search-icon">
+                <input type="text">
+            </div>
+            <div class="lang">
+                <img src="img/lang.svg" alt="" class="lang-icon">
+                <h2 class="lang-text">English</h2>
+                <i class='fas fa-angle-down' style='font-size:2rem'></i>
+    
+            </div>
+            <img class="cart-header" src="img/cart-header.svg">
+        </div>
+    </header>
+    <div class="delivery">
+        <h1 class="delivery_head">
+            Secure Checkout
+        </h1>
+        <hr>
+        <div class="delivery-content">
+            <div class="left-side__container">
+                <div class="delivery-content__address">
+                    <div class="head">
+                        <img src="img/delivery-icon.svg" alt="">
+                        <h2>Delivery address</h2>
+                    </div>
+                     
+                     <!-- <div class="address-container"> -->
+                        <div class="address">
+                            <img src="img/unactive-delivey_icon.svg" alt="">
+                            <p> 12-34-12, XYC Apartments, 15 DOOR, Fifth Settlement, Cairo</p>
+                        </div>
+                      
+
+                     <!-- </div> -->
+                </div>
+                <div class="delivery-content__typeOrder">
+                    <div class="head">
+                        <img src="img/delivery-icon.svg" alt="">
+                        <h2>Type of Order</h2>
+                    </div>
+                    
+                    <div class="type-order__container">
+                        <button class="order-now btn-active update-width">
+                            <img src="img/white-calendar_icon.svg" alt="">
+                            <span>Order Now</span>
+                            
+                        </button>
+                        <button class="unactive-btn schedule-btn original-width">
+                            <img src="img/black-calendar_icon.svg" alt="">
+                            <span>Schedule Order</span>
+                        </button>
+
+                    </div>
+                    <div class="deliveryScheduling hidden">
+                        <div class="delivery-date">
+                            <h3>Date of delivery</h3>
+                            <div class="date">
+                                <img src="img/grey-calendar_icon.svg" alt="">
+                                <p>23/02/2025</p>
+                            </div>
+                        </div>
+                        <div class="delivery-time">
+                            <h3>Time of delivery</h3>
+                            <div class="date">
+                                <img src="img/grey-calendar_icon.svg" alt="">
+                                <p>16:30</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-side__container">
+                <div class="cart">
+                    <div class="cart-head">
+                        <h2>Cart</h2>
+                        <p><span class="num">5</span> Items</p>
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item__content">
+                            <p class="category">
+                                from <span>Heat Drink</span>
+                            </p>
+                            <div class="name-price-num__container">
+                                <div class="name-price">
+                                    <p class="item-name">Cappuccino</p>
+                                    <p class="price"><span>60</span> EGP</p>
+                                </div>
+                                <div class="cart-item__num">
+                                    <img src="img/-.svg" alt="minIcon">
+                                    <div class="num">1</div>
+                                    <img src="img/+.svg" alt="addIcon">
+                                </div>
+                            </div>
+                            
+                        </div>
+                       
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item__content">
+                            <p class="category">
+                                from <span>Heat Drink</span>
+                            </p>
+                            <div class="name-price-num__container">
+                                <div class="name-price">
+                                    <p class="item-name">Cappuccino</p>
+                                    <p class="price"><span>60</span> EGP</p>
+                                </div>
+                                <div class="cart-item__num">
+                                    <img src="img/-.svg" alt="minIcon">
+                                    <div class="num">1</div>
+                                    <img src="img/+.svg" alt="addIcon">
+                                </div>
+                            </div>
+                            
+                        </div>
+                       
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item__content">
+                            <p class="category">
+                                from <span>Heat Drink</span>
+                            </p>
+                            <div class="name-price-num__container">
+                                <div class="name-price">
+                                    <p class="item-name">Cappuccino</p>
+                                    <p class="price"><span>60</span> EGP</p>
+                                </div>
+                                <div class="cart-item__num">
+                                    <img src="img/-.svg" alt="minIcon">
+                                    <div class="num">1</div>
+                                    <img src="img/+.svg" alt="addIcon">
+                                </div>
+                            </div>
+                            
+                        </div>
+                       
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item__content">
+                            <p class="category">
+                                from <span>Heat Drink</span>
+                            </p>
+                            <div class="name-price-num__container">
+                                <div class="name-price">
+                                    <p class="item-name">Cappuccino</p>
+                                    <p class="price"><span>60</span> EGP</p>
+                                </div>
+                                <div class="cart-item__num">
+                                    <img src="img/-.svg" alt="minIcon">
+                                    <div class="num">1</div>
+                                    <img src="img/+.svg" alt="addIcon">
+                                </div>
+                            </div>
+                            
+                        </div>
+                       
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item__content">
+                            <p class="category">
+                                from <span>Heat Drink</span>
+                            </p>
+                            <div class="name-price-num__container">
+                                <div class="name-price">
+                                    <p class="item-name">Cappuccino</p>
+                                    <p class="price"><span>60</span> EGP</p>
+                                </div>
+                                <div class="cart-item__num">
+                                    <img src="img/-.svg" alt="minIcon">
+                                    <div class="num">1</div>
+                                    <img src="img/+.svg" alt="addIcon">
+                                </div>
+                            </div>
+                            
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="bill-details">
+                    <h2>Bill details</h2>
+                    <div class="bill-details__container">
+                        <p>Item Total</p>
+                        <p><span>380</span>EGP</p>
+                    </div>
+                    <div class="bill-details__container delivery-container">
+                        <div class="delivery">
+                                <p class="delivery-desc">Delivery Fee | 1.9 kms
+                                    Custom Delivery time</p>
+                                    <img src="img/!.svg" alt="">
+                        </div>
+                        <p><span>20</span> EGP</p>
+                    </div>
+                    <div class="bill-details__container taxes-container">
+                        <div class="taxes">
+                            <p>Taxes and Charges</p>
+                            <img src="img/!.svg" alt="">
+                        </div>
+                        <p><span>20</span> EGP</p>
+
+                    </div>
+                </div>
+                <div class="total">
+                    <p>Total</p>
+                    <p><span>420</span> EGP</p>
+                </div>
+                <a href="payment.html">
+                    <button>Proceed To Payment</button>
+                </a>
+            </div>
+            
+        </div>
+       
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-container__content">
+                <div class="footer-container__content-logo">
+                    <img src="img/logo.svg" alt="" class="website-logo">
+                    <h2 class="website-title">
+                       Cafe<span>cceno</span>
+                    </h2>
+                </div>
+                <div class="footer-container__content__text-with-us">
+                    <h3>Text with us</h3>
+                    <div class="subscribe">
+                        <input placeholder="E-mail" type="email">
+                        <button>Subscribe</button>
+                    </div>
+                    <p> Sign up with your email address to  </p>
+                    <p>receive news and updates</p>
+                </div>
+                <div class="footer-container__content-menu">
+                    <ul  class="footer-container__content-menu__list">
+                        <li>Home</li>
+                        <li>About Us</li>
+                        <li>Products</li>
+                        <li>Delivery</li>
+                        <li>Blogs</li>
+                        <li>Booking</li>
+                        <li>Offers</li>
+                    </ul>
+                </div>
+                <div class="footer-container__content__contact-us">
+                    <h3>CONTACT US</h3>
+                    <p class="address">Cairo, Egypt</p> 
+                    <p>Call Us: <br> +02 01000000000</p>
+                    <p>example@gmail.com</p>
+                </div>
+            </div>
+            <hr>
+             <div>
+                <p>Copyright ©2025 Cafeccino. All rights reserved.</p>
+
+             </div>
+        </div>
+       </footer> 
+</body>
+</html>

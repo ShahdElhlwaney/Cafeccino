@@ -18,14 +18,14 @@ class HeaderView extends View{
                 </div>
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li class="nav-list__item active" >
+                        <li class="nav-list__item" >
                             <a href="#!">Home</a>
                         </li>
                         <li class="nav-list__item">
-                            <a href="#!">Our Product</a>
+                            <a href="ourProdunst.html">Our Product</a>
                         </li>
                         <li class="nav-list__item">
-                            <a href="#!">Delivery</a>
+                            <a href="delivery.html">Delivery</a>
                         </li>
                     </ul>
                 </nav>

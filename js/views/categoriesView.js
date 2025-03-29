@@ -15,7 +15,7 @@ class CategoriesView extends View{
     }
      _parentElement=document.querySelector('.page');
      _pages=[
-      `${document.querySelector('.heat-drink_page').innerHTML}`,
+      `${document.querySelector('.heat-drink_page')?.innerHTML}`,
         `<div class="nav-buttons">
             <img class="navSliderBtn" src=${unActiveNavBtn}>
             <img  src=${activeNavBtn}>
